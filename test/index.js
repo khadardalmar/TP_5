@@ -1,9 +1,17 @@
-import assert from 'assert';
+import { should } from 'chai';
 import tp5 from '../lib';
 
+should(); // Modifies objects prototype to include the 'should' property
 describe('tp-5', function () {
   it('should have a version number!', function () {
-    assert(typeof tp5.VERSION !== 'undefined', 'The Project should have a VERSION, whatever the actual version.');
+    
+ 	tp5.should.have.property('VERSION');
   });
 });
+
+
+
+
+
+
 
